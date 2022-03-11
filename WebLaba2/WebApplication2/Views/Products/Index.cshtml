@@ -1,0 +1,25 @@
+﻿@model IEnumerable<Product>
+@{
+    ViewData["Title"] = "Список товаров";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Список товаров</h1>
+<div class="card-columns">
+@foreach (var product in Model)
+{
+    <div class="card">
+        <div class="card-img" style="background-image: url('@product.Image');"></div>
+        <div class="card-body">
+            <h5 class="card-title">@product.Title</h5>
+        </div>
+        <div class="card-footer">
+            <small class="text-muted"><a href="/product/@product.Id/">Перейти в карточку товара</a>
+            </small>
+        </div>
+    </div>
+}
+</div>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</div>
+

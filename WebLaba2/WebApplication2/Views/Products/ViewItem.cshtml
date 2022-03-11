@@ -1,0 +1,14 @@
+﻿@model Product
+@{
+    ViewData["Title"] = Model.Title;
+}
+<div class="text-center">
+    <h1 class="display-4">@Model.Title</h1>
+    <div class="card">
+        <img class="card-img" src="@Model.Image" />
+        <div class="card-body">
+            <p class="card-text">@Model.Description</p>
+        </div>
+    </div>
+</div>
+
